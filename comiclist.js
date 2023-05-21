@@ -15,7 +15,11 @@ fetch(
         <div class="comiclist__title__name">${i[0]}</div>
         <div class="comiclist__title__year">${i[1]}</div>
         <div class="comiclist__title__authors">${i[2]}</div>
-        <div class="comiclist__title__publisher" onclick="myFunction('${i[3]}')">${i[3]}</div>
+        <div class="comiclist__title__publisher">
+        <label class="grade">
+        <input type="checkbox"/>${i[3]} <span>( ${myFunction(i[3])} )</span>
+        </label>
+      </div>
         <div class="comiclist__title__price">${i[4]}</div>
         <div class="comiclist__title__link"><a href="${i[5]}">${i[5]}</a></div>
       </div>
@@ -109,7 +113,7 @@ function myFunction(e) {
       info = "Invalid grade.";
       break;
   }
-  alert(info);
+  return info;
 }
 function wirtein(e) {
   document.querySelector("section.comiclist").innerHTML =

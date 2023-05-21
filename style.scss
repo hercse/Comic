@@ -28,6 +28,16 @@ body {
 a {
   color: var(--first);
 }
+.grade {
+  span {
+    display: none;
+  }
+  &:has(input:hover) {
+    span {
+      display: inline;
+    }
+  }
+}
 .comiclist {
   &__title {
     padding: var(--10-space) 0;
@@ -49,7 +59,7 @@ a {
     img {
       width: 100%;
       // 強制比例
-      // aspect-ratio: 7 / 10 !important;
+      aspect-ratio: 1/1.54 !important;
       object-fit: contain;
       object-position: center;
     }
