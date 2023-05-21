@@ -92,6 +92,10 @@ a {
 }
 @media screen and (max-width: 800px) {
   .comiclist {
+    &__title {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 10px;
+    }
     &__content {
       & > *:nth-child(2) {
         grid-column: 3/7;
@@ -104,13 +108,26 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    margin: 25px;
+  }
   .comiclist {
+    &__title {
+      & > div:nth-child(1) {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 40px;
+        line-height: 90%;
+        margin: 20px 0;
+        grid-column: 1/4;
+      }
+    }
     &__content {
+      row-gap: 20px;
       & > *:nth-child(2) {
-        grid-column: 4/7;
+        grid-column: 3/7;
       }
       img {
-        grid-column: 1/4;
+        grid-column: 1/7;
       }
     }
   }
