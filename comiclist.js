@@ -15,9 +15,8 @@ fetch(
         <div class="comiclist__title__name">${i[0]}</div>
         <div class="comiclist__title__year">${i[1]}</div>
         <div class="comiclist__title__authors">${i[2]}</div>
-        <div class="comiclist__title__publisher">
-        <label class="grade">
-        <input type="checkbox"/>${i[3]} <span>( ${myFunction(i[3])} )</span>
+        <div class="grades">
+        ${i[3]} <span>(${myFunction(i[3])})</span>
         </label>
       </div>
         <div class="comiclist__title__price">${i[4]}</div>
@@ -110,7 +109,7 @@ function myFunction(e) {
       info = "0.5 Poor is in very poor condition.";
       break;
     default:
-      info = "Invalid grade.";
+      info = "?";
       break;
   }
   return info;
