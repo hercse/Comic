@@ -44,6 +44,9 @@ a {
   &__title {
     padding: var(--10-space) 0;
     display: grid;
+    & > div:nth-child(1) {
+      font-weight: bold;
+    }
   }
   &__title,
   &__content {
@@ -113,9 +116,11 @@ a {
   }
   .comiclist {
     &__title {
+      padding: 40px 0px;
       & > div:nth-child(1) {
+        font-weight: normal;
         grid-template-columns: repeat(3, 1fr);
-        font-size: 40px;
+        font-size: 25px;
         line-height: 90%;
         margin: 20px 0;
         grid-column: 1/4;
