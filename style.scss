@@ -90,7 +90,7 @@ a {
     }
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .comiclist {
     &__title {
       grid-template-columns: repeat(3, 1fr);
@@ -107,7 +107,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
     margin: 25px;
   }
