@@ -125,6 +125,13 @@ a {
         margin: 20px 0;
         grid-column: 1/4;
       }
+      & > div:nth-child(3) {
+        grid-area: 2 / 1 / 5 / 2;
+        font-size: 40px;
+        &::before {
+          content: "#";
+        }
+      }
     }
     &__content {
       row-gap: 20px;
