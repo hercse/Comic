@@ -10,7 +10,7 @@ fetch(
     comiclist.forEach((i) => {
       console.log(i);
       output = `<label>
-      <input type="checkbox" class=""/>
+      <input type="checkbox" class="" checked />
       <div class="comiclist__title">
         <div class="comiclist__title__name">${i[0]}</div>
         <div class="comiclist__title__year">${i[1]}</div>

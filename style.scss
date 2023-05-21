@@ -61,6 +61,13 @@ a {
       opacity: 0;
       position: absolute;
     }
+    // &:has(input:checked) {
+    //   .comiclist__content {
+    //     height: auto;
+    //     padding: var(--10-space) 0;
+    //     padding-bottom: var(--20-space);
+    //   }
+    // }
     &:has(input:checked) {
       .comiclist__content {
         height: auto;
