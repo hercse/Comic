@@ -149,6 +149,10 @@ function wirtein() {
 
 function GradeInfo(e) {
   switch (e) {
+    case "NEW":
+      info =
+        "A brand new comic is completely unused and has no signs of wear or damage.";
+      break;
     case "GM":
       info = "10.0 Gem Mint is in perfect condition.";
       break;
