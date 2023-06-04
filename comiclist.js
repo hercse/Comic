@@ -7,31 +7,69 @@ fetch(
   .then((res) => {
     console.log(res.values);
     comiclist = res.values;
-    comiclist.forEach((i) => {
-      console.log(i);
-      output = `<label>
-      <input type="checkbox" class="" />
-      <div class="comiclist__title">
-        <div class="comiclist__title__name">${i[0]}</div>
-        <div class="comiclist__title__year">${i[1]}</div>
-        <div class="comiclist__title__authors">${i[2]}</div>
-        <div class="grades">
-        ${i[3]} <span>(${myFunction(i[3])})</span>
-        </label>
-      </div>
-        <div class="comiclist__title__price">${i[4]}</div>
-        <div class="comiclist__title__link"><a href="${i[5]}">${i[5]}</a></div>
-      </div>
-      <div class="comiclist__content">
-        <img class="" src="${i[6]}" alt="" />
-        <div class="">${i[7]}</div>
-      </div>
-    </label>`;
-      console.log(output);
-      wirtein();
-    });
+    displayComics(comiclist.slice(1));
+
+    // 為搜尋欄位添加事件監聽器
+    document
+      .getElementById("search-input")
+      .addEventListener("input", handleSearchInput);
   });
-function myFunction(e) {
+
+function handleSearchInput(event) {
+  const searchTerm = event.target.value;
+  if (searchTerm === "") {
+    // 如果搜尋欄位是空的，則顯示所有漫畫
+    displayComics(comiclist.slice(1), "");
+  } else {
+    const filteredComicList = comiclist
+      .slice(1)
+      .filter((comic) =>
+        comic[0].toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    displayComics(filteredComicList, searchTerm);
+  }
+}
+
+function displayComics(comicList, searchTerm) {
+  document.querySelector("section.comiclist").innerHTML = "";
+  comicList.forEach((i) => {
+    let highlightedTitle = i[0];
+
+    // 如果存在搜尋詞，則在相符字串前後加入<span>和</span>
+    if (searchTerm !== "") {
+      const regex = new RegExp("(" + searchTerm + ")", "gi");
+      highlightedTitle = i[0].replace(regex, "<span>$1</span>");
+    }
+
+    output = `<label>
+    <input type="checkbox" class=""  />
+    <div class="comiclist__title">
+      <div class="comiclist__title__name">${i[0]}</div>
+      <div class="comiclist__title__year">${i[1]}</div>
+      <div class="comiclist__title__authors">${i[2]}</div>
+      <div class="comiclist__title__authors">${i[3]}</div>
+      <div class="grades">
+      ${i[4]} <span>(${GradeInfo(i[4])})</span>
+      </label>
+    </div>
+      <div class="comiclist__title__">${i[5]}</div>
+      <div class="comiclist__title__link"><a href="${i[6]}">${i[6]}</a></div>
+      <div class="comiclist__title__price">${i[9]}</div>
+    </div>
+    <div class="comiclist__content">
+      <img class="" src="${i[7]}" alt="" />
+      <div class="">${i[8]}</div>
+    </div>
+  </label>`; // 在此處使用 highlightedTitle 替換原始模板中的 ${i[0]}
+    wirtein();
+  });
+}
+
+function wirtein() {
+  document.querySelector("section.comiclist").innerHTML += output;
+}
+
+function GradeInfo(e) {
   switch (e) {
     case "GM":
       info = "10.0 Gem Mint is in perfect condition.";
@@ -113,8 +151,4 @@ function myFunction(e) {
       break;
   }
   return info;
-}
-function wirtein(e) {
-  document.querySelector("section.comiclist").innerHTML =
-    document.querySelector("section.comiclist").innerHTML + output;
 }
