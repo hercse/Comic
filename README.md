@@ -1,6 +1,6 @@
 # 我的漫畫選擇器
 
-[English](#english) | [日本語](#japanese) | [Français](#french) | [Deutsch](#german) | [Español](#spanish) | [Italiano](#italian) | [Português](#portuguese) | [Nederlands](#dutch) | [한국어](#korean) | [Русский](#russian)
+[English](#english) | [日本語](#japanese) | [Français](#french) | [Deutsch](#german) | [Español](#spanish) | [Italiano](#italian) | [Português](#portuguese) | [Nederlands](#dutch) | [한국어](#korean)
 
 歡迎來到我的漫畫選擇器！你是否也是一位熱愛漫畫的朋友？我們知道世界上有無數的漫畫，而每一部都有獨特的魅力。因此，我創建了這個工具，它將幫助您輕鬆地從我的漫畫資料庫中挑選出心儀的作品。
 
@@ -246,4 +246,36 @@ Welkom bij mijn Manga Keuzetool! Ben je ook een liefhebber van manga's? We weten
 
 ## Contactgegevens
 Voor aankopen, ruilvoorstellen of vragen, neem gerust contact met mij op via de volgende methoden:
-- E-mail:
+- E-mail:youremail@example.com
+- Telefoon: (123) 456-7890
+- Social Media-account: YourSocialMedia
+
+Ontdek samen met mij de wereld van manga!
+
+<a name="korean"></a>
+# 나의 만화 선택기
+
+나의 만화 선택기에 오신 것을 환영합니다! 당신도 만화를 좋아하는 친구입니까? 세상에는 수없이 많은 만화가 있으며, 각각 독특한 매력을 가지고 있습니다. 그래서 저는 이 도구를 만들어 내 만화 데이터베이스에서 쉽게 마음에 드는 작품을 선택할 수 있도록 도와드립니다.
+
+## 기능
+
+1. **검색**: 이 도구는 강력한 내장 검색 엔진을 통해 관심있는 만화를 빠르게 찾을 수 있습니다.
+2. **필터**: 저자, 장르, 연도 등의 조건으로 필터링하여 좋아하는 작품을 더 쉽게 찾을 수 있습니다.
+3. **구매**: 나의 만화 선택기에서 마음에 드는 작품을 발견하면 언제든지 나와 연락하여 구매할 수 있습니다.
+4. **교환**: 손에 여분의 만화가 있다면 나와 대화해 보시는 것은 어떨까요? 아마도 서로 좋아하는 작품을 교환할 수 있을지도 모릅니다.
+5. **위시리스트**: 여기에서는 내가 항상 수집하고 싶어했던 만화 작품을 찾을 수 있습니다. 혹시 이런 작품을 가지고 계시고 판매 또는 교환에 동의하신다면 저와 연락해 주세요.
+
+## 사용 방법
+
+1. 먼저 검색창에 관심 있는 만화 이름이나 키워드를 입력합니다.
+2. 필터링 옵션을 사용하여 더 정확한 검색 결과를 얻습니다.
+3. 검색 결과를 확인하고 관심 있는 작품을 클릭하여 자세한 정보를 확인합니다.
+4. 만화를 구매하거나 교환하고 싶으면 나와 연락주세요.
+
+## 연락처 정보
+구매, 교환 요청 또는 문의 사항이 있으시면 아래 연락처로 언제든지 연락해 주세요:
+- 이메일: youremail@example.com
+- 전화번호: (123) 456-7890
+- 소셜 미디어 계정: YourSocialMedia
+
+함께 만화의 세계를 탐험해요!
