@@ -127,4 +127,123 @@ Willkommen bei meinem Manga-Auswahlwerkzeug! Sind Sie auch ein Manga-Liebhaber? 
 
 ## Anleitung
 
-1. Geben Sie zunächst den Namen des Mangas oder Schlüsselwörter, an denen Sie interessiert sind,
+1. Geben Sie zunächst den Namen des Mangas oder Schlüsselwörter, an denen Sie interessiert sind,in der Suchleiste ein.
+2. Verwenden Sie Filteroptionen für genauere Ergebnisse.
+3. Durchsuchen Sie die Suchergebnisse und klicken Sie auf interessante Werke, um detaillierte Informationen anzuzeigen.
+4. Wenn Sie Manga kaufen oder tauschen möchten, zögern Sie nicht, mich zu kontaktieren.
+
+## Kontaktinformationen
+Für Kaufanfragen, Tauschangebote oder Fragen können Sie mich gerne über die folgenden Kontaktmöglichkeiten erreichen:
+- E-Mail: youremail@example.com
+- Telefon: (123) 456-7890
+- Social-Media-Konto: YourSocialMedia
+
+Entdecken Sie mit mir die Welt der Mangas!
+
+<a name="spanish"></a>
+# Mi Selector de Manga
+
+¡Bienvenido a mi Selector de Manga! ¿Eres un amante de los mangas también? Sabemos que hay innumerables mangas en el mundo, cada uno con su encanto único. Por eso he creado esta herramienta que te ayudará a elegir fácilmente tus obras favoritas de mi base de datos de mangas.
+
+## Características
+
+1. **Búsqueda**: Esta herramienta tiene un potente motor de búsqueda incorporado para encontrar rápidamente el manga en el que estás interesado.
+2. **Filtrar**: Puedes filtrar por autor, categoría, año y más, lo que facilita la localización de tus obras favoritas.
+3. **Compra**: Si ves una obra que te gusta en mi Selector de Manga, no dudes en ponerte en contacto conmigo para comprarla.
+4. **Intercambio**: Si tienes algunos mangas de sobra, ¿por qué no hablar conmigo? Tal vez podamos intercambiar nuestras obras favoritas.
+5. **Lista de deseos**: Aquí puedes encontrar las obras de manga que siempre he querido coleccionar. Si tienes alguna de estas obras y estás dispuesto a venderla o intercambiarla, por favor, contáctame.
+
+## Cómo utilizar
+
+1. Primero, introduce el nombre del manga o las palabras clave que te interesan en la barra de búsqueda.
+2. Utiliza las opciones de filtrado para obtener resultados más precisos.
+3. Examina los resultados de la búsqueda y haz clic en las obras que te interesen para ver información detallada.
+4. Si quieres comprar o intercambiar mangas, no dudes en ponerte en contacto conmigo.
+
+## Información de contacto
+Para compras, intercambios o cualquier consulta, no dudes en contactarme a través de los siguientes métodos:
+- Correo electrónico: youremail@example.com
+- Teléfono: (123) 456-7890
+- Cuenta de redes sociales: YourSocialMedia
+
+¡Explora el mundo del manga conmigo!
+
+<a name="italian"></a>
+# Il mio Selettore di Manga
+
+Benvenuto nel mio Selettore di Manga! Sei anche tu un appassionato di manga? Sappiamo che ci sono innumerevoli manga nel mondo, ognuno con il suo fascino unico. Per questo ho creato questo strumento che ti aiuterà a scegliere facilmente le tue opere preferite dal mio database di manga.
+
+## Caratteristiche
+
+1. **Ricerca**: Questo strumento è dotato di un potente motore di ricerca integrato per trovare rapidamente il manga che ti interessa.
+2. **Filtro**: Puoi filtrare per autore, categoria, anno e altro ancora, rendendo più semplice la ricerca delle tue opere preferite.
+3. **Acquisto**: Se vedi un'opera che ti piace nel mio Selettore di Manga, sentiti libero di contattarmi per acquistarla.
+4. **Scambio**: Se hai dei manga in eccesso, perché non parlarne con me? Forse possiamo scambiarci le nostre opere preferite.
+5. **Lista dei desideri**: Qui puoi trovare le opere di manga che ho sempre voluto collezionare. Se possiedi queste opere e sei disposto a venderle o scambiarle, ti prego di contattarmi.
+
+## Come utilizzare
+
+1. Per prima cosa, inserisci il nome del manga o le parole chiave che ti interessano nella barra di ricerca.
+2. Utilizza le opzioni di filtro per ottenere risultati più precisi.
+3. Esamina i risultati della ricerca e fai clic sulle opere che ti interessano per visualizzare informazioni dettagliate.
+4. Se vuoi acquistare o scambiare manga, non esitare a contattarmi.
+
+## Informazioni di contatto
+Per acquisti, scambi o qualsiasi domanda, non esitare a contattarmi attraverso i seguenti metodi:
+- Email: youremail@example.com
+- Telefono: (123) 456-7890
+- Account sui social media: YourSocialMedia
+
+Esplora il mondo dei manga con me!
+
+<a name="portuguese"></a>
+# Meu Seletor de Mangás
+
+Bem-vindo ao meu Seletor de Mangás! Você também é um amante de mangás? Sabemos que existem inúmeros mangás no mundo, cada um com seu charme único. Por isso, criei esta ferramenta que irá ajudá-lo a escolher facilmente suas obras favoritas a partir do meu banco de dados de mangás.
+
+## Funcionalidades
+
+1. **Busca**: Esta ferramenta possui um poderoso mecanismo de busca integrado para encontrar rapidamente o mangá de seu interesse.
+2. **Filtrar**: Você pode filtrar por autor, categoria, ano e mais, facilitando a localização de suas obras favoritas.
+3. **Compra**: Se você encontrar uma obra de seu interesse no meu Seletor de Mangás, sinta-se à vontade para entrar em contato comigo para comprá-la.
+4. **Troca**: Se você possui alguns mangás extras, por que não conversar comigo? Talvez possamos trocar nossas obras favoritas.
+5. **Lista de Desejos**: Aqui, você pode encontrar as obras de mangá que eu sempre quis colecionar. Se você possui essas obras e está disposto a vendê-las ou trocá-las, por favor entre em contato comigo.
+
+## Como utilizar
+
+1. Primeiro, digite o nome do mangá ou palavras-chave de seu interesse na barra de pesquisa.
+2. Use opções de filtro para obter resultados mais precisos.
+3. Navegue pelos resultados da pesquisa e clique nas obras de seu interesse para ver informações detalhadas.
+4. Caso queira comprar ou trocar mangás, sinta-se à vontade para entrar em contato comigo.
+
+## Informações de contato
+Para compras, trocas ou quaisquer dúvidas, sinta-se à vontade para entrar em contato comigo pelos seguintes meios:
+- E-mail: youremail@example.com
+- Telefone: (123) 456-7890
+- Conta de mídia social: YourSocialMedia
+
+Explore o mundo dos mangás comigo!
+
+<a name="dutch"></a>
+# Mijn Manga Keuzetool
+
+Welkom bij mijn Manga Keuzetool! Ben je ook een liefhebber van manga's? We weten dat er ontelbare manga's in de wereld zijn, elk met hun eigen unieke charme. Daarom heb ik deze tool gemaakt die je helpt om eenvoudig je favoriete werken uit mijn manga-database te kiezen.
+
+## Functies
+
+1. **Zoeken**: Deze tool heeft een krachtige ingebouwde zoekmachine om snel de manga te vinden die je interesseert.
+2. **Filteren**: Je kunt filteren op auteur, categorie, jaar en meer, waardoor het gemakkelijker wordt om je favoriete werken te vinden.
+3. **Aankoop**: Als je een werk ziet dat je leuk vindt in mijn Manga Keuzetool, neem dan gerust contact met mij op om het te kopen.
+4. **Ruilen**: Als je wat overtollige manga's hebt, waarom bespreek je het niet met mij? Misschien kunnen we onze favoriete werken met elkaar uitwisselen.
+5. **Verlanglijstje**: Hier kun je de manga-werken vinden die ik altijd al wilde verzamelen. Als je toevallig deze werken hebt en bereid bent ze te verkopen of ruilen, neem dan contact met mij op.
+
+## Hoe te gebruiken
+
+1. Voer eerst de naam van de manga of trefwoorden waarin je geïnteresseerd bent in de zoekbalk.
+2. Gebruik filteropties voor nauwkeurigere resultaten.
+3. Bekijk de zoekresultaten en klik op werken die je interessant vindt om gedetailleerde informatie te bekijken.
+4. Als je manga's wilt kopen of ruilen, neem dan gerust contact met mij op.
+
+## Contactgegevens
+Voor aankopen, ruilvoorstellen of vragen, neem gerust contact met mij op via de volgende methoden:
+- E-mail:
