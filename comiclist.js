@@ -7,7 +7,7 @@ fetch(
   .then((res) => {
     console.log(res.values);
     comiclist = res.values;
-    displayComics(comiclist.slice(1));
+    displayComics(comiclist.slice(1), "");
 
     // 為搜尋欄位添加事件監聽器
     document
@@ -33,16 +33,20 @@ function handleSearchInput(event) {
 function displayComics(comicList, searchTerm) {
   document.querySelector("section.comiclist").innerHTML = "";
   comicList.forEach((i) => {
-    let highlightedTitle = i[0];
+    let isChecked = "";
 
-    // 如果存在搜尋詞，則在相符字串前後加入<span>和</span>
     if (searchTerm !== "") {
-      const regex = new RegExp("(" + searchTerm + ")", "gi");
-      highlightedTitle = i[0].replace(regex, "<span>$1</span>");
+      const regExpChars = /[.*+\-?^${}()|[\]\\]/g;
+      const escapedSearchTerm = searchTerm.replace(regExpChars, "\\$&");
+      const regex = new RegExp(escapedSearchTerm, "gi");
+
+      if (i[0].match(regex)) {
+        isChecked = "checked";
+      }
     }
 
     output = `<label>
-    <input type="checkbox" class=""  />
+    <input type="checkbox"  class=""  ${isChecked} />
     <div class="comiclist__title">
       <div class="comiclist__title__name">${i[0]}</div>
       <div class="comiclist__title__year">${i[1]}</div>
