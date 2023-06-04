@@ -1,7 +1,17 @@
 var comiclist;
 var output;
+
+// 檢查 URL query string 以獲取 sheet 名稱
+function getSheetNameFromQueryString() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sheetName = urlParams.get("sheet") || "";
+  return sheetName !== "" ? sheetName : "Comic Storage List";
+}
+
+const sheetName = getSheetNameFromQueryString();
+
 fetch(
-  "https://sheets.googleapis.com/v4/spreadsheets/193NLQaDa9eKSApAHpW0PQQ16rPOlZX2VzPzU2eaSzAc/values/Comic Storage List?alt=json&key=AIzaSyDx9l2u11YUgI_XZ7KB3n0v7yvvN_ERhCk"
+  `https://sheets.googleapis.com/v4/spreadsheets/193NLQaDa9eKSApAHpW0PQQ16rPOlZX2VzPzU2eaSzAc/values/${sheetName}?alt=json&key=AIzaSyDx9l2u11YUgI_XZ7KB3n0v7yvvN_ERhCk`
 )
   .then((res) => res.json())
   .then((res) => {
@@ -25,19 +35,43 @@ function getSearchTermFromQueryString() {
   return urlParams.get("search") || "";
 }
 
+// 新函數：從 query string 獲取 patch
+function getPatchFromQueryString() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("patch") || "";
+}
 function filterAndDisplayComics(searchTerm) {
-  if (searchTerm === "") {
+  const patchFilter = getPatchFromQueryString();
+
+  if (searchTerm === "" && patchFilter === "") {
     displayComics(comiclist.slice(1), "");
   } else {
     document.getElementById("search-input").value = searchTerm;
-    const filteredComicList = comiclist
-      .slice(1)
-      .filter((comic) =>
-        comic[0].toLowerCase().includes(searchTerm.toLowerCase())
-      );
+    const filteredComicList = comiclist.slice(1).filter((comic) => {
+      const titleMatch = comic[0]
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const patchMatch =
+        patchFilter === "" ? true : comic[6].includes(patchFilter);
+      return titleMatch && patchMatch;
+    });
     displayComics(filteredComicList, searchTerm);
   }
 }
+
+// function filterAndDisplayComics(searchTerm) {
+//   if (searchTerm === "") {
+//     displayComics(comiclist.slice(1), "");
+//   } else {
+//     document.getElementById("search-input").value = searchTerm;
+//     const filteredComicList = comiclist
+//       .slice(1)
+//       .filter((comic) =>
+//         comic[0].toLowerCase().includes(searchTerm.toLowerCase())
+//       );
+//     displayComics(filteredComicList, searchTerm);
+//   }
+// }
 
 function updateQueryString(searchTerm) {
   if (searchTerm) {
@@ -95,7 +129,9 @@ function displayComics(comicList, searchTerm) {
       </label>
     </div>
       <div class="comiclist__title__">${i[5]}</div>
-      <div class="comiclist__title__link"><a href="${i[6]}">${i[6]}</a></div>
+      <div class="comiclist__title__link"><a href="?patch=${i[6]}">${
+      i[6]
+    }</a></div>
       <div class="comiclist__title__price">${i[9]}</div>
     </div>
     <div class="comiclist__content">
