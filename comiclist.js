@@ -234,3 +234,41 @@ function GradeInfo(e) {
   }
   return info;
 }
+
+// 為全選框添加事件監聽器
+document
+  .getElementById("select-all-checkbox")
+  .addEventListener("change", (event) => {
+    const selectAllChecked = event.target.checked;
+    toggleAllCheckboxes(selectAllChecked);
+  });
+
+function toggleAllCheckboxes(selectAllChecked) {
+  // 選擇或取消選擇所有 section.comiclist 中的 checkboxes
+  const allCheckboxes = document.querySelectorAll(
+    "section.comiclist input[type=checkbox]"
+  );
+  allCheckboxes.forEach((checkbox) => {
+    checkbox.checked = selectAllChecked;
+  });
+}
+
+// GRID
+
+// 為切換 test 類別的 checkbox 添加事件監聽器
+document
+  .getElementById("toggle-test-class-checkbox")
+  .addEventListener("change", (event) => {
+    const testClassChecked = event.target.checked;
+    toggleTestClass(testClassChecked);
+  });
+
+function toggleTestClass(testClassChecked) {
+  // 根據 checkbox 的狀態，為 section.comiclist 添加或移除 test 類別
+  const comicListSection = document.querySelector("body");
+  if (testClassChecked) {
+    comicListSection.classList.add("test");
+  } else {
+    comicListSection.classList.remove("test");
+  }
+}

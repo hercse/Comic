@@ -7,16 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.min.css" />
   </head>
-  <body>
+  <body class="test">
     <h1>Comic Storage Selector</h1>
     <section class="comiclist2">
       <label class="search">[Search] <input type="text" id="search-input" name="search-input" placeholder="..." /></label>
+      <label for="">
+       <!-- 在 HTML 中添加一個新的 div 元素 -->
+       <div id="toggle-test-class-container">
+        <input type="checkbox" id="toggle-test-class-checkbox" />
+        <label for="toggle-test-class-checkbox">[ List / Grid ]</label>
+      </div>
+        <div id="select-all-container">
+        <input type="checkbox" id="select-all-checkbox" />
+        <label for="select-all-checkbox">[Open / Close] for All Cell</label>
+        </div>
+    </label>
       <label>
         <input type="checkbox" class="" />
         <div class="comiclist__title">
           <div class="comiclist__title__name">Series</div>
           <div class="comiclist__title__year">Year</div>
-          <div class="comiclist__title__authors">Issue</div>
+          <div class="comiclist__title__authors">-</div>
           <div class="comiclist__title__authors">Cover</div>
           <div class="grades">
           Grade <span>(?)</span></div>
