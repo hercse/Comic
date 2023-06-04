@@ -9,14 +9,52 @@ fetch(
     comiclist = res.values;
     displayComics(comiclist.slice(1), "");
 
+    // Get the search term from the query string and display filtered results
+    const searchTerm = getSearchTermFromQueryString();
+    filterAndDisplayComics(searchTerm);
+
     // 為搜尋欄位添加事件監聽器
     document
       .getElementById("search-input")
       .addEventListener("input", handleSearchInput);
   });
 
+// 當頁面加載時，並沒有調用QueryString並出現搜尋結果
+function getSearchTermFromQueryString() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("search") || "";
+}
+
+function filterAndDisplayComics(searchTerm) {
+  if (searchTerm === "") {
+    displayComics(comiclist.slice(1), "");
+  } else {
+    document.getElementById("search-input").value = searchTerm;
+    const filteredComicList = comiclist
+      .slice(1)
+      .filter((comic) =>
+        comic[0].toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    displayComics(filteredComicList, searchTerm);
+  }
+}
+
+function updateQueryString(searchTerm) {
+  if (searchTerm) {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set("search", searchTerm);
+    window.history.pushState(null, "", newUrl.toString());
+  } else {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.delete("search");
+    window.history.pushState(null, "", newUrl.toString());
+  }
+}
+
 function handleSearchInput(event) {
   const searchTerm = event.target.value;
+  updateQueryString(searchTerm);
+
   if (searchTerm === "") {
     // 如果搜尋欄位是空的，則顯示所有漫畫
     displayComics(comiclist.slice(1), "");
