@@ -302,6 +302,7 @@ a {
     &__title {
       grid-template-columns: repeat(2, 1fr);
       gap: 5px !important;
+      display: none;
     }
     &__content {
       grid-row-start: 1;
@@ -337,6 +338,9 @@ a {
         position: absolute;
       }
       &:has(input:checked) {
+        .comiclist__title {
+          display: grid;
+        }
         .comiclist__content {
           aspect-ratio: 1/1.54 !important;
           * {
