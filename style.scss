@@ -64,6 +64,7 @@ a {
     .about {
       display: block;
     }
+    border-top: 1px solid #fff;
   }
   .about {
     margin-top: dots(10);
@@ -255,6 +256,7 @@ body:not(.mode) {
         gap: dots(1);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
         .publisher {
           grid-column-start: 2;
           grid-row-start: 1;
@@ -273,10 +275,6 @@ body:not(.mode) {
   body.mode {
     --mode-grid: 3;
   }
-  body:not(.mode) {
-    .comiclist:not(:has(input:checked)) {
-    }
-  }
   .comiclist {
     label {
       &:has(input:checked) {
@@ -293,6 +291,18 @@ body:not(.mode) {
   }
 }
 @media screen and (max-width: 700px) {
+  body:not(.mode) {
+    .comiclist:not(:has(input:checked)) {
+      .title {
+        grid-column: 1 / span 3;
+        grid-row-start: 1;
+      }
+      .publisher {
+        grid-column-start: 1;
+        grid-row-start: 2 !important;
+      }
+    }
+  }
   body.mode {
     --mode-grid: 2;
   }
