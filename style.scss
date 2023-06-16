@@ -158,12 +158,22 @@ body:has(#search-input:focus) {
     height: 0px;
   }
 }
+// 開啟詳細說明選單後，關閉背景的所有東西。包括頁首
+body {
+  &:has(.comiclist input:checked) {
+    label:not(:has(input:checked)) {
+      display: none;
+    }
+    .site-cover {
+      height: 0px;
+    }
+  }
+}
 
 // comiclist
 .comiclist {
   margin-bottom: dots(50);
   margin-top: dots(10);
-  // margin: dots(50) 0;
   label {
     &:has(input:checked) {
       z-index: 100;
