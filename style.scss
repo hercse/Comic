@@ -1,365 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-h1 {
-  font-size: 60px;
-  font-weight: 500;
-  margin-bottom: 50px;
-}
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
-  // space
-  --500-space: 500px;
-  --100-space: 100px;
-  --20-space: 20px;
-  --10-space: 10px;
-  --color-sec: #fff;
-  --color-first: #000;
+  --dot: 8px;
 }
-span.keywords {
-  color: red !important;
-  display: none;
+@function dots($dot) {
+  $return: calc(var(--dot) * $dot);
+  @return $return;
+}
+html,
+body {
+  margin: 0;
+  font-size: dots(1.75);
+  color: #fff;
 }
 body {
-  font-family: "Space Mono", "BIZ UDGothic", monospace;
-  //   letter-spacing: 0.1em;
-  color: var(--color-first);
-  background-color: var(--color-sec);
-  word-wrap: break-word;
-  margin: 10px;
-  font-size: 15px;
+  padding: dots(1);
+  background-color: #000;
 }
-section:has(.search) {
-  position: sticky;
-  width: 100%;
+* {
+  line-height: 100%;
+  font-family: "Space Mono", "BIZ UDPGothic", monospace;
+  box-sizing: border-box;
+}
+.header {
+  z-index: 100;
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 5px 0;
-  background-color: var(--color-sec);
-  z-index: 10000;
-  backdrop-filter: blur(20px);
-  .search {
-    column-gap: var(--20-space);
-    width: 100%;
-    display: grid;
-    &,
-    * {
-      // font-size: 20px !important;
-      font-family: "Space Mono", "BIZ UDGothic", monospace;
+  padding: dots(1);
+  font-weight: normal;
+  background-color: #000;
+  width: 100%;
+  span {
+    opacity: 0.3;
+  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .tool {
+    text-align: right;
+    & > div {
+      display: inline-block;
     }
-    input {
-      background: transparent;
-      text-decoration: solid !important;
-      grid-column: 2/8;
-      font-size: 15px;
-      width: 100%;
-      color: var(--color-first);
-      border: 0;
-      opacity: 1;
-      width: auto;
-      &:focus {
-        outline: none;
+  }
+}
+.footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: dots(1);
+  font-weight: normal;
+  background-color: #000;
+  width: 100%;
+  // transform: translateY(dots(23));
+  transition: transform 1s;
+  &:has(input:checked) {
+    .about {
+      display: block;
+    }
+    // opacity: 0;
+
+    // opacity: 0.5;
+  }
+  .about {
+    margin-top: dots(10);
+    display: none;
+    p {
+      margin-bottom: 0;
+      max-width: dots(100);
+    }
+  }
+  .display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .info {
+      position: relative;
+      input {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
       }
     }
-  }
-}
-a {
-  color: var(--first);
-}
-.grades {
-  span {
-    display: none;
-  }
-  &:hover,
-  &:checked {
-    span {
-      display: inline;
+    .copyright {
+      text-align: right;
     }
   }
 }
 
-.comiclist,
-.comiclist2 {
-  &__title {
-    padding: var(--10-space) 0;
-    display: grid;
-    & > div:nth-child(1) {
-      font-weight: bold;
-    }
-    & > div:nth-child(3) {
-      &::before {
-        content: "#";
-      }
-    }
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+input#search-input {
+  font-size: dots(1.75);
+  opacity: 0.3;
+  border: 0;
+  background: none;
+  color: #fff;
+  &:focus {
+    // border: none;
+    outline: none;
+    // border-bottom: 1px #fff solid;
   }
-  &__title,
-  &__content,
-  .search {
-    grid-template-columns: repeat(7, 1fr);
-    column-gap: var(--20-space);
-  }
-  &__content {
-    display: grid;
-    height: 0;
-    overflow: hidden;
-    border-bottom: var(--color-first) 1px solid;
-    & > *:nth-child(2) {
-      grid-column: 2/4;
-    }
-    * {
-      // opacity: 0;
-      // transform: translateY(-5vh);
-    }
+}
+
+// comiclist
+.comiclist {
+  margin-top: dots(50);
+  label {
     img {
       width: 100%;
-      // 強制比例
-      aspect-ratio: 1/1.54 !important;
-      object-fit: contain;
-      object-position: center;
-    }
-  }
-  label {
-    input[type="checkbox"] {
-      // display: none;
-      // width: 0;
-      opacity: 0;
-      position: absolute;
-    }
-    // &:has(input:checked) {
-    //   .comiclist__content {
-    //     height: auto;
-    //     padding: var(--10-space) 0;
-    //     padding-bottom: var(--20-space);
-    //   }
-    // }
-    // &:has(input:hover),
-    &:has(input:checked) {
-      .comiclist__content {
-        * {
-          // transform: translateY(0);
-          // opacity: 1;
-        }
-        height: auto;
-        padding: var(--10-space) 0;
-        padding-bottom: var(--20-space);
-      }
-    }
-  }
-}
-@media screen and (max-width: 1100px) {
-  .test {
-    label {
-      column-gap: 10px;
-    }
-    // --poster: 2 !important;
-    .comiclist__title {
-      grid-template-columns: repeat(1, 1fr) !important;
-      column-gap: 0px;
-    }
-    .search {
-      column-gap: 10px !important;
-      input {
-        grid-column: 2/2 !important;
-      }
-    }
-  }
-  .search input {
-    grid-column: 2/5;
-  }
-  .comiclist,
-  .comiclist2 {
-    &__title,
-    .search {
-      grid-template-columns: repeat(4, 1fr);
-      row-gap: 10px;
-    }
-    &__content {
-      grid-template-columns: repeat(4, 1fr);
-      & > *:nth-child(2) {
-        grid-column: 2/4;
-      }
-      img {
-        grid-column: 1/2;
-      }
-    }
-  }
-}
-@media screen and (max-width: 400px) {
-  .test .comiclist {
-    --poster: 1 !important;
-  }
-}
-@media screen and (max-width: 700px) {
-  .test {
-    // font-size: 12px;
-    --poster: 2 !important;
-    .comiclist,
-    .comiclist2 > label {
-      gap: 10px !important;
-    }
-    .comiclist__content {
-      &::after {
-        display: none !important;
-      }
-    }
-  }
-  body:not(.test) {
-    section:has(.search) {
-      position: relative !important;
-    }
-    body {
-      margin: 20px;
-    }
-    .search input {
-      grid-column: 2/3 !important;
-    }
-    .comiclist,
-    .comiclist2 {
-      &__title,
-      .search {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 40px 0px;
-        & > div:nth-child(1) {
-          font-weight: normal;
-          font-size: 25px;
-          line-height: 90%;
-          margin: 20px 0;
-          grid-column: 1/4;
-        }
-        & > div:nth-child(3) {
-          &::before {
-            content: "#";
-            font-size: 40px;
-            vertical-align: middle;
-          }
-          grid-area: 2 / 1 / 5 / 2;
-          font-size: 65px;
-        }
-      }
-      &__content {
-        grid-template-columns: repeat(3, 1fr);
-        &::after {
-          content: "Content";
-          grid-area: 2/1/3/2;
-        }
-        row-gap: 20px;
-        & > *:nth-child(2) {
-          grid-column: 2/4;
-        }
-        img {
-          grid-column: 1/4;
-        }
-      }
+      height: 100%;
+      aspect-ratio: 7/10 !important;
     }
   }
 }
 
-.test {
-  --poster: 4;
+body.mode .comiclist {
+  // display: none;
+  display: grid;
+  gap: dots(1);
+  grid-template-columns: repeat(4, 1fr);
+  .hide {
+    display: none;
+  }
+}
+
+body:not(.mode) .comiclist {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: dots(1);
   label {
-    display: grid;
-    // grid-template-rows: 1fr 2fr;
-    grid-auto-flow: dense;
-  }
-  .comiclist2 {
-    & > label:nth-child(1) {
-      grid-template-columns: repeat(var(--poster), 1fr);
-    }
-    & > label:nth-child(2) {
+    border-bottom: #fff 1px solid;
+    padding-bottom: dots(1);
+    .display {
+      gap: dots(1);
       display: grid;
-      grid-template-columns: repeat(var(--poster), 1fr);
-    }
-    *:nth-child(3) {
-      display: none;
-    }
-    .search input {
-      grid-column: 2/4;
-    }
-  }
-  .comiclist {
-    display: grid;
-    grid-template-columns: repeat(var(--poster), 1fr);
-    gap: 10px;
-    &__title {
-      padding: 0;
-      // display: none;
-      & > div:nth-child(1) {
-        font-weight: bold;
-      }
-      & > div:nth-child(3) {
-        &::before {
-          content: "#";
-        }
-      }
-    }
-    &__content,
-    .search {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 5px !important;
-    }
-    &__title {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5px !important;
-      display: none;
-    }
-    &__content {
-      grid-row-start: 1;
-      display: grid;
-      height: auto;
-      overflow: auto;
-      border-bottom: 0px;
-      padding: 0 !important;
-      & > *:nth-child(2) {
-        &::before {
-          content: "[Content]";
-          margin-bottom: 0.5em;
-          display: block;
-        }
-        display: none;
-        aspect-ratio: 1/1.54 !important;
-      }
-      * {
-        opacity: 1;
-      }
+      grid-template-columns: repeat(3, 1fr);
       img {
-        width: 100%;
-        height: auto;
-        // 強制比例
-        aspect-ratio: 1/1.54 !important;
-        object-fit: cover;
-        object-position: center;
+        display: none;
       }
     }
-    label {
-      row-gap: 10px;
-      input[type="checkbox"] {
-        opacity: 0;
-        position: absolute;
-      }
-      &:has(input:checked) {
-        .comiclist__title {
-          display: grid;
-        }
-        .comiclist__content {
-          aspect-ratio: 1/1.54 !important;
-          * {
-            transform: translateY(0);
-            opacity: 1;
-          }
-          img {
-            // display: none;
-            // opacity: 0;
-          }
-          & > *:nth-child(2) {
-            // display: block;
-            // height: 100%;
-          }
-          height: auto;
-          padding-bottom: var(--20-space);
-        }
-      }
+    .hide {
+      display: none;
     }
   }
+
+  // display: none;
 }

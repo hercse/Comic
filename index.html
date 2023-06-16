@@ -8,19 +8,85 @@
     <link rel="stylesheet" href="style.min.css" />
   </head>
   <body class="">
-    <h1>Comic Storage Selector</h1>
-    <section class="comiclist2">
+    <div class="header">
+      <div class="src">
+        <span>[herc.se] / </span>Comic Collocation / *
+        <input
+          type="text"
+          id="search-input"
+          name="search-input"
+          placeholder="Search..."
+        />
+      </div>
+
+      <div class="tool">
+        <div id="toggle-mode-container">
+          <input type="checkbox" id="toggle-mode-checkbox" />
+          <label for="toggle-mode-checkbox">[三/田]</label>
+        </div>
+        <div id="select-all-container">
+          <input type="checkbox" id="select-all-checkbox" />
+          <label for="select-all-checkbox">[Collapse]</label>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="display">
+        <div class="info">
+          <label for="">[!] <input type="checkbox" name="" id="" /></label>
+        </div>
+        <div class="copyright">
+          Copyright © 2022 Hercse. All rights reserved.
+        </div>
+      </div>
+      <div class="about">
+        <p># My Manga Selector</p>
+
+        <p>
+          Welcome to my Manga Selector! Are you a fellow manga lover? We know
+          that there are countless mangas in the world, each with its unique
+          charm. That's why I created this tool that will help you easily pick
+          out your favorite works from my manga database.
+        </p>
+
+        <p>## Features</p>
+
+        <p>
+          1. **Search**: This tool has a powerful built-in search engine to
+          quickly find the manga you're interested in. 2. **Filter**: You can
+          filter by author, category, year, and more, making it easier to locate
+          your favorite works. 3. **Purchase**: If you see a work you like in my
+          Manga Selector, feel free to contact me to buy it. 4. **Trade**: If
+          you have some spare manga, why not discuss with me? Maybe we can
+          exchange our favorite works. 5. **Wishlist**: Here, you can find the
+          manga works I've always wanted to collect. If you happen to have these
+          works and are willing to sell or trade, please contact me.
+        </p>
+
+        <p>## How to Use</p>
+
+        <p>
+          1. First, enter the manga name or keywords you are interested in the
+          search bar. 2. Use filtering options for more accurate results. 3.
+          Browse the search results and click on works you're interested in to
+          view detailed information. 4. If you want to purchase or trade manga,
+          feel free to contact me.
+        </p>
+
+        <p>
+          ## Contact Information For purchasing, trading, or any inquiries, feel
+          free to contact me through the following methods: - Email:
+          youremail@example.com - Phone: (123) 456-7890 - Social Media Account:
+          YourSocialMedia
+        </p>
+
+        <p>Explore the world of manga with me!</p>
+      </div>
+    </div>
+
+    <!-- <section class="comiclist-title">
       <label class="search">[Search] <input type="text" id="search-input" name="search-input" placeholder="..." /></label>
       <label for="">
-       <!-- 在 HTML 中添加一個新的 div 元素 -->
-       <div id="toggle-test-class-container">
-        <input type="checkbox" id="toggle-test-class-checkbox" />
-        <label for="toggle-test-class-checkbox">[ List / Grid ]</label>
-      </div>
-        <div id="select-all-container">
-        <input type="checkbox" id="select-all-checkbox" />
-        <label for="select-all-checkbox">[Open / Close] for All Cell</label>
-        </div>
     </label>
       <label>
         <input type="checkbox" class="" />
@@ -35,59 +101,58 @@
           <div class="">Patch</div>
           </label>
       </label>
-    </section>
+    </section> -->
     <section class="comiclist">
-      <!-- <label>
+      <label>
         <input type="checkbox" class="" />
-        <div class="comiclist__title">
-          <div class="comiclist__title__name">${i[0]}</div>
-          <div class="comiclist__title__year">${i[1]}</div>
-          <div class="comiclist__title__authors">${i[2]}</div>
-          <div class="comiclist__title__authors">${i[3]}</div>
-          <div class="grades">
-          ${i[4]} <span>(${myFunction(i[4])})</span>
-          </label>
+        <div class="display">
+          <img class="" src="${i[7]}" alt="" />
+          <div class="title">${i[0]}</div>
+          <div class="year">${i[1]}</div>
+          <div class="issue">${i[2]}</div>
+          <div class="cover">${i[3]}</div>
+          <div class="grades">${i[4]}</div>
+          <div class="publisher">${i[5]}</div>
+          <div class="patch">
+            <a href="?patch=${i[6]}">${ i[6] }</a>
+          </div>
+          <div class="price">${i[9]}</div>
         </div>
-          <div class="comiclist__title__">${i[5]}</div>
-          <div class="comiclist__title__link"><a href="${i[6]}">${i[6]}</a></div>
-          <div class="comiclist__title__price">${i[9]}</div>
+        <div class="hide">
+          <div class="">${i[8]}</div>
         </div>
-      </label> -->
-      <!-- <label>
-        <div class="comiclist__title">
-          <div class="comiclist__title__name">Name</div>
-          <div class="comiclist__title__year">Year</div>
-          <div class="comiclist__title__authors">Author (s)</div>
-          <div class="comiclist__title__publisher">Publisher</div>
-          <div class="comiclist__title__price">Price</div>
-          <div class="comiclist__title__link">[Link]</div>
-        </div>
-        <div class="comiclist__content"></div>
       </label>
       <label>
         <input type="checkbox" class="" />
-        <div class="comiclist__title">
-          <div class="comiclist__title__name">X-Treme X-Men Volume 1</div>
-          <div class="comiclist__title__year">2013</div>
-          <div class="comiclist__title__authors">Chris Claremont, Greg Pak</div>
-          <div class="comiclist__title__publisher">Marvel Comics</div>
-          <div class="comiclist__title__price">6800 JPY</div>
-          <div class="comiclist__title__link"></div>
-        </div>
-        <div class="comiclist__content">
+        <div class="display">
           <img
             class=""
-            src="https://upload.wikimedia.org/wikipedia/en/3/3c/X-Treme_X-Men_Destiny.jpg"
+            src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-5201861.jpg?1676733387"
             alt=""
           />
+          <div class="title">X-Force (2020 Marvel)</div>
+          <div class="year">2020</div>
+          <div class="issue">5</div>
+          <div class="cover">B</div>
+          <div class="grades">NM <span>(undefined)</span></div>
+          <div class="publisher">Marvel</div>
+          <div class="patch">
+            <a href="?patch=MCS 2023-05">MCS 2023-05</a>
+          </div>
+          <div class="price">$ -</div>
+        </div>
+        <div class="hide">
           <div class="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            sit id error magni qui rerum fugit porro neque impedit iure!
+            NECESSARY FORCE DEADLY CHOICES CARRY DARK CONSEQUENCES! Deadly
+            choices carry dark consequences! First, Domino and Forge have to
+            pick up the pieces as the team faces a major setback! Then, Beast
+            takes matters into his own hands when a piece of new technology
+            threatens the safety of the nation. LEGACY #245
           </div>
         </div>
-      </label> -->
+      </label>
     </section>
-    <p style="margin-top: 10em;">©HERCSE, GUI 1.00 ver.</p>
+    <p style="margin-top: 10em">©HERCSE, GUI 1.00 ver.</p>
     <script src="comiclist.js"></script>
   </body>
 </html>
