@@ -211,8 +211,19 @@ body:not(.mode) {
   }
   body:not(.mode) {
     .comiclist:not(:has(input:checked)) {
-      .title {
-        grid-column-end: span 3 !important;
+    }
+  }
+  .comiclist {
+    label {
+      &:has(input:checked) {
+        .display {
+          .title {
+            grid-column-end: span 4 !important;
+          }
+          .patch {
+            grid-column-end: span 2 !important;
+          }
+        }
       }
     }
   }
