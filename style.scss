@@ -17,9 +17,13 @@ body {
   padding: dots(1);
   background-color: #000;
 }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 * {
   line-height: 100%;
-  font-family: "Space Mono", "BIZ UDPGothic", monospace;
+  font-family: "Space Mono", "BIZ UDPGothic", "Noto Sans TC", monospace;
   box-sizing: border-box;
 }
 .header {
@@ -104,48 +108,110 @@ input#search-input {
     // border-bottom: 1px #fff solid;
   }
 }
-
+#select-all-container {
+  display: none;
+}
 // comiclist
 .comiclist {
-  margin-top: dots(50);
+  margin: dots(50) 0;
   label {
-    img {
+    &:has(input:checked) {
+      z-index: 100;
+      padding: dots(1);
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      position: fixed;
+      overflow-y: scroll;
+      background: #000;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: dots(1);
+      img {
+        display: block !important;
+      }
+      .display {
+        max-height: dots(10);
+        grid-row: 1;
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: dots(1);
+        .year {
+          grid-row: 2;
+        }
+      }
+      .hide {
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+      // height: 100%;
       aspect-ratio: 7/10 !important;
     }
   }
 }
 
-body.mode .comiclist {
-  // display: none;
-  display: grid;
-  gap: dots(1);
-  grid-template-columns: repeat(4, 1fr);
-  .hide {
-    display: none;
-  }
-}
-
-body:not(.mode) .comiclist {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: dots(1);
-  label {
-    border-bottom: #fff 1px solid;
-    padding-bottom: dots(1);
+body.mode {
+  --mode-grid: 4;
+  .comiclist:not(:has(input:checked)) {
+    // display: none;
+    display: grid;
+    gap: dots(2) dots(1);
+    grid-template-columns: repeat(var(--mode-grid), 1fr);
     .display {
-      gap: dots(1);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      img {
-        display: none;
+      margin: dots(1) 0;
+      .title {
+        grid-column-end: span 3;
       }
+      .patch {
+        // grid-column-end: span 2;
+      }
+      display: grid;
+      gap: dots(1);
+      grid-template-columns: repeat(3, 1fr);
     }
     .hide {
       display: none;
     }
   }
+}
 
-  // display: none;
+body:not(.mode) {
+  .comiclist:not(:has(input:checked)) {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: dots(1);
+    label {
+      border-bottom: #fff 1px solid;
+      padding-bottom: dots(1);
+      img {
+        display: none;
+      }
+      .display {
+        gap: dots(1);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hide {
+        display: none;
+      }
+    }
+
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body.mode {
+    --mode-grid: 3;
+  }
+}
+@media screen and (max-width: 700px) {
+  body.mode {
+    --mode-grid: 2;
+  }
 }

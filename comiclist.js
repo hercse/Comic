@@ -36,6 +36,8 @@ function getSearchTermFromQueryString() {
   return urlParams.get("search") || "";
 }
 
+// Patch
+
 function getPatchFromQueryString() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get("patch") || "";
@@ -91,11 +93,11 @@ function handleSearchInput(event) {
 function createPosterTemplate(i, isChecked) {
   return `<label>
   <input type="checkbox" class="" />
+  <img class="" src="${i[7]}" alt="" />
   <div class="display">
-    <img class="" src="${i[7]}" alt="" />
     <div class="title">${i[0]}</div>
     <div class="year">${i[1]}</div>
-    <div class="issue">${i[2]}</div>
+    <div class="issue">#${i[2]}</div>
     <div class="cover">${i[3]}</div>
     <div class="grades">${i[4]}</div>
     <div class="publisher">${i[5]}</div>

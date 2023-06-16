@@ -10,7 +10,8 @@
   <body class="">
     <div class="header">
       <div class="src">
-        <span>[herc.se] / </span>Comic Collocation / *
+        <span><a href="http://herc.se/">[herc.se]</a> / </span>Comic Collocation
+        / *
         <input
           type="text"
           id="search-input"
@@ -22,7 +23,7 @@
       <div class="tool">
         <div id="toggle-mode-container">
           <input type="checkbox" id="toggle-mode-checkbox" />
-          <label for="toggle-mode-checkbox">[三/田]</label>
+          <label for="toggle-mode-checkbox">[三/㗊]</label>
         </div>
         <div id="select-all-container">
           <input type="checkbox" id="select-all-checkbox" />
@@ -83,33 +84,14 @@
         <p>Explore the world of manga with me!</p>
       </div>
     </div>
-
-    <!-- <section class="comiclist-title">
-      <label class="search">[Search] <input type="text" id="search-input" name="search-input" placeholder="..." /></label>
-      <label for="">
-    </label>
-      <label>
-        <input type="checkbox" class="" />
-        <div class="comiclist__title">
-          <div class="comiclist__title__name">Series</div>
-          <div class="comiclist__title__year">Year</div>
-          <div class="comiclist__title__authors">-</div>
-          <div class="comiclist__title__authors">Cover</div>
-          <div class="grades">
-          Grade <span>(?)</span></div>
-          <div class="">Publisher</div>
-          <div class="">Patch</div>
-          </label>
-      </label>
-    </section> -->
     <section class="comiclist">
       <label>
         <input type="checkbox" class="" />
+        <img class="" src="${i[7]}" alt="" />
         <div class="display">
-          <img class="" src="${i[7]}" alt="" />
           <div class="title">${i[0]}</div>
           <div class="year">${i[1]}</div>
-          <div class="issue">${i[2]}</div>
+          <div class="issue">#${i[2]}</div>
           <div class="cover">${i[3]}</div>
           <div class="grades">${i[4]}</div>
           <div class="publisher">${i[5]}</div>
@@ -152,7 +134,6 @@
         </div>
       </label>
     </section>
-    <p style="margin-top: 10em">©HERCSE, GUI 1.00 ver.</p>
     <script src="comiclist.js"></script>
   </body>
 </html>
