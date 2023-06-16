@@ -209,6 +209,13 @@ body:not(.mode) {
   body.mode {
     --mode-grid: 3;
   }
+  body:not(.mode) {
+    .comiclist:not(:has(input:checked)) {
+      .title {
+        grid-column-end: span 3 !important;
+      }
+    }
+  }
 }
 @media screen and (max-width: 700px) {
   body.mode {
