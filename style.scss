@@ -59,18 +59,17 @@ a {
   font-weight: normal;
   background-color: #000;
   width: 100%;
-  // transform: translateY(dots(23));
   transition: transform 1s;
   &:has(input:checked) {
     .about {
       display: block;
     }
-    // opacity: 0;
-
-    // opacity: 0.5;
   }
   .about {
     margin-top: dots(10);
+    max-height: 50vh;
+    height: dots(40);
+    overflow-y: scroll;
     display: none;
     p {
       margin-bottom: 0;
