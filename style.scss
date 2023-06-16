@@ -39,7 +39,10 @@ a {
     opacity: 0.3;
   }
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  .src {
+    grid-column-end: span 3;
+  }
   .tool {
     text-align: right;
     & > div {
@@ -111,9 +114,56 @@ input#search-input {
 #select-all-container {
   display: none;
 }
+
+.site-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+// body:has(input#search-input:focus) {
+//   opacity: 0;
+// }
+.comiclist {
+  transition: opacity 1s 0.1s;
+}
+
+// 給特效使用的初始狀態
+
+html:has(#search-input:placeholder-shown) body:not(:has(#search-input:focus)) {
+}
+
+// 當開始輸入時，數入筐沒東西時
+body:has(#search-input:placeholder-shown:focus) {
+  .comiclist {
+    opacity: 0.2;
+  }
+}
+// 以輸入後，但還沒搜尋完
+html:not(:has(#search-input:placeholder-shown)) body:has(#search-input:focus) {
+  .comiclist {
+    transition: opacity 0.5s 0.1s;
+    opacity: 0.5;
+  }
+}
+
+// 搜尋到東西後
+body:not(:has(#search-input:placeholder-shown)),
+body:has(#search-input:focus) {
+  .comiclist {
+    opacity: 1;
+  }
+  .site-cover {
+    height: 0px;
+  }
+}
+
 // comiclist
 .comiclist {
-  margin: dots(50) 0;
+  margin-bottom: dots(50);
+  margin-top: dots(10);
+  // margin: dots(50) 0;
   label {
     &:has(input:checked) {
       z-index: 100;
@@ -195,6 +245,10 @@ body:not(.mode) {
         gap: dots(1);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        .publisher {
+          grid-column-start: 2;
+          grid-row-start: 1;
+        }
       }
       .hide {
         display: none;
