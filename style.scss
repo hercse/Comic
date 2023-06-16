@@ -161,12 +161,13 @@ body:has(#search-input:focus) {
 // 開啟詳細說明選單後，關閉背景的所有東西。包括頁首
 body {
   &:has(.comiclist input:checked) {
-    label:not(:has(input:checked)) {
-      display: none;
-    }
-    .site-cover {
-      height: 0px;
-    }
+    overflow: hidden;
+    // label:not(:has(input:checked)) {
+    //   display: none;
+    // }
+    // .site-cover {
+    // height: 0px;
+    // }
   }
 }
 
