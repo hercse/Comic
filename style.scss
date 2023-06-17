@@ -141,10 +141,19 @@ body:has(#search-input:placeholder-shown:focus) {
   }
 }
 // 以輸入後，但還沒搜尋完
+@keyframes searching {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 html:not(:has(#search-input:placeholder-shown)) body:has(#search-input:focus) {
   .comiclist {
     transition: opacity 0.5s 0.1s;
     opacity: 0.5;
+    animation: searching 1.5s 5s ease-in-out infinite alternate;
   }
 }
 
@@ -179,6 +188,7 @@ body {
     &:has(input:checked) {
       z-index: 100;
       padding: dots(1);
+      padding-top: dots(0);
       top: 0;
       left: 0;
       width: 100%;
@@ -194,6 +204,12 @@ body {
         display: block !important;
       }
       .display {
+        padding: dots(1) 0;
+        margin-bottom: dots(20);
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #000;
         max-height: dots(10);
         grid-row: 1;
         grid-column: 1 / span 2;
